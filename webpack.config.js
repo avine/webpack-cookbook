@@ -4,8 +4,8 @@ module.exports = {
   entry: './src/index.js',
 
   output: {
-    publicPath: '/dist', // only used by `webpack-dev-server` command
-    path: path.resolve(__dirname, 'dist'), // only used by `webpack` command
+    publicPath: '/dist',
+    path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js'
   }
 }
