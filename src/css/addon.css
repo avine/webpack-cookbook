@@ -1,0 +1,10 @@
+html {
+  background-color: #eee;
+}
+
+#logo {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  background-image: url('../images/favicon.gif');
+}
