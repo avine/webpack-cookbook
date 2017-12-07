@@ -1,0 +1,16 @@
+
+#wrapper {
+  margin: 1rem auto;
+  max-width: 480px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  background-color: #fff;
+}
+
+#logo {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  background-image: url('../images/favicon.gif');
+}

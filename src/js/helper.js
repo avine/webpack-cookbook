@@ -1,3 +1,3 @@
-export default function (a, b) {
+export const addNumbers = function (a, b) {
   return a + b
 }
