@@ -1,5 +1,12 @@
+html {
+  background-color: #eee;  
+}
 
-#wrapper {
+body {
+  margin: 0;
+}
+
+#container {
   margin: 1rem auto;
   max-width: 480px;
   box-sizing: border-box;
@@ -10,6 +17,7 @@
 
 #logo {
   display: inline-block;
+  vertical-align: middle;
   width: 32px;
   height: 32px;
   background-image: url('../images/favicon.gif');

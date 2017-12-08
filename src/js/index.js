@@ -1,2 +1,4 @@
-import './test1'
-import './test2'
+import hello from './hello'
+import user from './user'
+
+document.getElementById('hello-user').innerHTML = hello(user)

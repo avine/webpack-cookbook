@@ -17,8 +17,25 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.html$/,
+        use: {
+          loader: 'html-loader',
+          options: {
+            attrs: [':src']
+          }
+        }
+      },
+      {
         test: /\.(png|jpg|gif)$/,
-        use: ['file-loader']
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              outputPath: 'images/',
+              name: '[name].[hash].[ext]'
+            }  
+          }
+        ]
       },
       {
         test: /\.css$/,
