@@ -4,14 +4,16 @@ const CleanPlugin = require('clean-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const HtmlPlugin = require('html-webpack-plugin')
 
-const extractCss = new ExtractTextPlugin('bundle.css')
+const extractCss = new ExtractTextPlugin('[name].[hash].css')
 
 module.exports = {
-  entry: './src/index.js',
+  entry: {
+    app: './src/index.js' 
+  },
 
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js'
+    filename: '[name].[hash].js'
   },
 
   module: {
