@@ -40,10 +40,23 @@ module.exports = {
         ]
       },
       {
-        test: /\.css$/,
+        test: /\.less$/,
         use: extractCss.extract({
           fallback: 'style-loader',
-          use: 'css-loader'
+          use: [
+            {
+              loader: 'css-loader',
+              options: {
+                sourceMap: true
+              }
+            },
+            {
+              loader: 'less-loader',
+              options: {
+                sourceMap: true
+              }
+            }
+          ]
         })
       }
     ]
@@ -54,6 +67,8 @@ module.exports = {
     extractCss,
     new HtmlPlugin({ template: './src/index.html' })
   ],
+
+  devtool: 'source-map',
 
   devServer: {
     open: true,
